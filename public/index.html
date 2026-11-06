@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple place to capture and manage your notes.">
+  <title>QuickNote — Your thoughts, organised</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="QuickNote home"><span class="brand-icon">✎</span> QuickNote</a>
+      <span class="top-tag">YOUR PERSONAL SPACE</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">A LITTLE SPACE FOR BIG IDEAS</p>
+          <h1>Your thoughts,<br><span>beautifully organised.</span></h1>
+          <p class="hero-copy">Capture the little things before they slip away.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-paper paper-back"></div>
+          <div class="art-paper paper-front"><span>✦</span><i></i><i></i><i></i></div>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="section-heading">
+          <div><p class="eyebrow">CREATE SOMETHING</p><h2>New note</h2></div>
+          <span class="tiny-label">SAVE YOUR IDEAS</span>
+        </div>
+
+        <form id="noteForm" class="note-form">
+          <label for="title">Title</label>
+          <input id="title" name="title" type="text" maxlength="100" placeholder="Give your note a title..." required>
+          <label for="content">Your note</label>
+          <textarea id="content" name="content" rows="4" maxlength="3000" placeholder="What's on your mind?" required></textarea>
+          <div class="form-bottom">
+            <span id="formMessage" class="form-message" role="status"></span>
+            <button type="submit" class="primary-button">Save note <span>↗</span></button>
+          </div>
+        </form>
+
+        <div class="notes-heading">
+          <div><p class="eyebrow">YOUR COLLECTION</p><h2>All notes <span id="noteCount" class="count">0</span></h2></div>
+          <span class="tiny-label">NEWEST FIRST</span>
+        </div>
+        <div id="notesGrid" class="notes-grid" aria-live="polite">
+          <div class="empty-state"><span class="empty-icon">✧</span><h3>Your space is waiting</h3><p>Create your first note above. It will appear here.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>Made for your thoughts. <span>QuickNote © 2026</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
