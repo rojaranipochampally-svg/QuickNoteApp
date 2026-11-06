@@ -7,7 +7,7 @@
 3. Open Terminal → New Terminal.
 4. Run `npm install` (only needed the first time).
 5. Run `npm start`.
-6. Open http://localhost:3000 in your browser.
+6. Open https://quicknoteapp-zzmi.onrender.com/ in your browser.
 
 Keep the terminal running while you use the app. Notes are stored locally in `data/notes.json`.
 
